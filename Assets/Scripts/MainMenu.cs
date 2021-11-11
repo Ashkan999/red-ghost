@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
     }
     public void openHighScore()
     {
-        Debug.Log("open highscore");
         highScoreMenu.SetActive(true);
         //gameObject.SetActive(false);
     }

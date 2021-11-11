@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackgroundLayer
+    uniqueID: 264509079
+    locked: 0
+  - name: BackgroundLightLayer
+    uniqueID: 842511109
+    locked: 0
   - name: ObstacleLayer
     uniqueID: 451558427
     locked: 0
