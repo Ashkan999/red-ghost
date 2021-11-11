@@ -2223,6 +2223,16 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 326046697}
+    - target: {fileID: 3141537606849381977, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 105.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141537606849381977, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 131
+      objectReference: {fileID: 0}
     - target: {fileID: 5929403131712649122, guid: 4791db41f0d20964ea3cc25f408334c5,
         type: 3}
       propertyPath: m_LocalPosition.x
