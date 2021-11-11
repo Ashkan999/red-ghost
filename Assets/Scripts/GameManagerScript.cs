@@ -78,6 +78,11 @@ public class GameManagerScript : MonoBehaviour
             gameOverScreen.SetActive(true); // naar gameScreens miss
             finalScore.DisplayFinalScore(score);
 
+            if (score > PlayerPrefs.GetInt("HighScore", 0)) 
+            {
+                PlayerPrefs.SetInt("HighScore", score);
+            }
+
             ObstacleMovement.speed = 0.0f;
             speedIncrease = 0.0f;
             Destroy(player);
