@@ -568,7 +568,7 @@ AnimationClip:
     path: 
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -779,16 +779,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4888523084616266441}
-    m_Position: {x: 340, y: -100, z: 0}
+    m_Position: {x: 390, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8134947151356025105}
-    m_Position: {x: 450, y: -20, z: 0}
+    m_Position: {x: 530, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1434188004152498853}
-    m_Position: {x: 470, y: 70, z: 0}
+    m_Position: {x: 530, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8384520284586664620}
-    m_Position: {x: 430, y: 190, z: 0}
+    m_Position: {x: 440, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3114183868549396862}
     m_Position: {x: 380, y: 340, z: 0}
@@ -803,7 +803,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 70, z: 0}
-  m_EntryPosition: {x: 70, y: -130, z: 0}
+  m_EntryPosition: {x: 30, y: -210, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -4888523084616266441}
