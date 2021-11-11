@@ -4,13 +4,12 @@ using TMPro;
 
 public class HighScoreMenu : MonoBehaviour
 {
-    public TextMeshProUGUI highScoreNumber;
+    [SerializeField] private TextMeshProUGUI highScoreNumber;
     [SerializeField] private GameObject firstButtonSelected;
 
-    void Start()
+    void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(firstButtonSelected);
-        gameObject.SetActive(false);
 
         highScoreNumber.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }

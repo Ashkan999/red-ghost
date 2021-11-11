@@ -7,8 +7,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject firstButtonSelected;
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private GameObject highScoreMenu;
+    [SerializeField] private GameObject settingsMenu;
 
-    void Start()
+    void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(firstButtonSelected);
     }
@@ -17,16 +18,17 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(sceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1));
     }
-    public void openHighScore()
+
+    public void OpenHighScore()
     {
         highScoreMenu.SetActive(true);
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void OpenSettings()
     {
-
-
+        settingsMenu.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void QuitGame()
