@@ -4,17 +4,20 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public Slider volumeSlider;
+    [SerializeField] private Slider volumeSlider;
     [SerializeField] private GameObject firstButtonSelected;
+
+    public UnityEngine.UI.Slider VolumeSlider { get => volumeSlider; set => volumeSlider = value; }
 
     void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(firstButtonSelected);
     }
 
-    public void AdjustVolume()
+    public void AdjustVolumeSlider()
     {
-        // AudioListener.volume = volumeSlider.value;
+        PlayerPrefs.SetFloat("MasterVolume", volumeSlider.value);
+        AudioListener.volume = volumeSlider.value;
     }
 
     public void ResetHighScore()

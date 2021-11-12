@@ -82,6 +82,7 @@ public class GameManagerScript : MonoBehaviour
         if (!gameHasEnded)
         {
             gameOverScreen.SetActive(true); // naar gameScreens miss
+            audioManager.StopMusic();
             finalScore.DisplayFinalScore(score);
 
             if (score > PlayerPrefs.GetInt("HighScore", 0))

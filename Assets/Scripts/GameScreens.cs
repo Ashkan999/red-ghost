@@ -8,11 +8,15 @@ public class GameScreens : MonoBehaviour
     public void RestartGame()
     {
         StartCoroutine(sceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex));
+
+        AudioManager.instance.StartGameplayMusic();
     }
 
     public void QuitToMainMenu()
     {
         StartCoroutine(sceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1));
         //StartCoroutine(LoadSceneAsync(X, sceneTransitionDuration));
+
+        AudioManager.instance.StartMenuMusic();
     }
 }

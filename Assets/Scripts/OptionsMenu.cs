@@ -43,6 +43,8 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         alreadyOpen = true;
+
+        AudioManager.instance.AdjustVolume(0.4f);
     }
 
     private void CloseOptionsMenu()
@@ -51,6 +53,8 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
         alreadyOpen = false;
+
+        AudioManager.instance.AdjustVolume(1.0f);
 
         playerController.EnablePlayerControls();
         Time.timeScale = 1f;

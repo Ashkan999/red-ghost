@@ -4172,12 +4172,12 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 844562175}
-        m_MethodName: AdjustVolume
+        m_MethodName: AdjustVolumeSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4268,18 +4268,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 490468230, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: m_Volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1429125308, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: m_Volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745941694, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: m_Volume
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 624352938400394610, guid: f0399cefe26e5ff43954540eaa3ae8f7,
         type: 3}
       propertyPath: m_Name
