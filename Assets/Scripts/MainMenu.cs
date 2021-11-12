@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject firstButtonSelected;
     [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private GameObject highScoreMenu;
     [SerializeField] private GameObject settingsMenu;
 
@@ -17,6 +18,8 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         StartCoroutine(sceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1));
+
+        audioManager.StartGameplayMusic();
     }
 
     public void OpenHighScore()

@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour
     public FinalScore finalScore;
     public GameObject player;
     public LivesContainer livesContainer;
+    public AudioManager audioManager;
 
     private int score;
     private int lives;
@@ -52,6 +53,11 @@ public class GameManagerScript : MonoBehaviour
             obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
         }
         //FindObjectsOfType<ObstacleMovement>() += speedIncrease * Time.deltaTime;
+
+        if (score > 50)
+        {
+            audioManager.ChangeGameplayMusic();
+        }
     }
 
     public void AddToScore(int scoreIncrease)
@@ -78,7 +84,7 @@ public class GameManagerScript : MonoBehaviour
             gameOverScreen.SetActive(true); // naar gameScreens miss
             finalScore.DisplayFinalScore(score);
 
-            if (score > PlayerPrefs.GetInt("HighScore", 0)) 
+            if (score > PlayerPrefs.GetInt("HighScore", 0))
             {
                 PlayerPrefs.SetInt("HighScore", score);
             }
