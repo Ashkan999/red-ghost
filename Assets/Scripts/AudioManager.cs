@@ -4,7 +4,9 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    private bool GameplayMusic2Started = false; //uopdate this outside this class when going to main menu from pause
+    private Animator animator;
+    private bool GameplayMusic2Started; //update this outside this class when going to main menu from pause
+    [SerializeField] private AudioSource playerMove;
 
     void Awake()
     {
@@ -12,6 +14,9 @@ public class AudioManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
+
+            animator = instance.GetComponent<Animator>();
+            GameplayMusic2Started = false;
         }
         else
         {
@@ -22,26 +27,26 @@ public class AudioManager : MonoBehaviour
 
     public void StartMenuMusic()
     {
-        AudioManager.instance.GetComponent<Animator>().SetTrigger("startMenuMusic");
+        animator.SetTrigger("startMenuMusic");
     }
 
     public void StartGameplayMusic()
     {
-        AudioManager.instance.GetComponent<Animator>().SetTrigger("startGameplayMusic");
+        animator.SetTrigger("startGameplayMusic");
     }
 
     public void ChangeGameplayMusic()
     {
         if (!GameplayMusic2Started)
         {
-            AudioManager.instance.GetComponent<Animator>().SetTrigger("startGameplayMusic2");
+            animator.SetTrigger("startGameplayMusic2");
             GameplayMusic2Started = true;
         }
     }
 
     public void StopMusic()
     {
-        AudioManager.instance.GetComponent<Animator>().SetTrigger("stopMusic");
+        animator.SetTrigger("stopMusic");
     }
 
     public void AdjustVolume(float volume)
@@ -56,5 +61,10 @@ public class AudioManager : MonoBehaviour
         float masterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
         AudioListener.volume = volume * masterVolume;
 
+    }
+
+    public void PlayPlayerMoveSound()
+    {
+        playerMove.Play();
     }
 }
