@@ -25,6 +25,8 @@ public class FinalScore : MonoBehaviour
         float numbersPerSecond = finalScore / duration;
         float currentScore = 0.0f;
 
+        AudioManager.instance.PlayFinalScoreSound();
+
         while (currentScore < finalScore)
         {
             scoreDisplay.text = currentScore.ToString("0");
@@ -35,5 +37,7 @@ public class FinalScore : MonoBehaviour
 
         scoreDisplay.text = finalScore.ToString();
         Destroy(Instantiate(finalScoreEffectPrefab, scoreDisplay.transform.position, Quaternion.identity), 2.0f);
+
+        AudioManager.instance.StopPlayigFinalScoreSound();
     }
 }

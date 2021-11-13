@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource menuSelection;
     [SerializeField] private AudioSource menuConfirm;
     [SerializeField] private AudioSource wind;
+    [SerializeField] private AudioSource finalScore;
+    [SerializeField] private AudioSource finalScoreFinish;
     [SerializeField] private string musicVolume;
     [SerializeField] private AudioMixer audioMixer;
 
@@ -99,6 +101,17 @@ public class AudioManager : MonoBehaviour
     public void PlayMenuConfirmSelectionSound()
     {
         menuConfirm.Play();
+    }
+
+    public void PlayFinalScoreSound()
+    {
+        finalScore.Play();
+    }
+
+    public void StopPlayigFinalScoreSound()
+    {
+        finalScore.Stop();
+        finalScoreFinish.Play();
     }
 
     public void PlayWindSound()

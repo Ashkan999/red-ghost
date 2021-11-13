@@ -445,12 +445,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!82 &417069043 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6232861840572622104, guid: f0399cefe26e5ff43954540eaa3ae8f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 629155438}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &477798334
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,10 +561,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1731575025, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: playerDeath
-      value: 
-      objectReference: {fileID: 417069043}
     - target: {fileID: 624352938400394610, guid: f0399cefe26e5ff43954540eaa3ae8f7,
         type: 3}
       propertyPath: m_Name
