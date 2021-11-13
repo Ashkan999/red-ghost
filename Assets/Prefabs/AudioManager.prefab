@@ -871,6 +871,9 @@ MonoBehaviour:
   playerDeath: {fileID: 6232861840572622104}
   menuSelection: {fileID: 4586824831172645752}
   menuConfirm: {fileID: 6006504471169332065}
+  wind: {fileID: 8013267001590805662}
+  musicVolume: 
+  audioMixer: {fileID: 24100000, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720, type: 2}
 --- !u!1 &1919935417276244703
 GameObject:
   m_ObjectHideFlags: 0

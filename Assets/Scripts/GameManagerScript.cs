@@ -38,6 +38,9 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         score = 0;
         scoreScript.scoreText.text = 0.ToString();
         lives = 3;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class OptionsMenu : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        EventSystem.current.SetSelectedGameObject(firstButtonSelected);
+        // EventSystem.current.SetSelectedGameObject(firstButtonSelected);
 
         CloseOptionsMenu();
     }
@@ -46,7 +47,15 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.blocksRaycasts = true;
         alreadyOpen = true;
 
-        AudioManager.instance.AdjustVolume(0.4f);
+        Button[] buttons = GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].enabled = true;
+        }
+
+        EventSystem.current.SetSelectedGameObject(firstButtonSelected);
+
+        AudioManager.instance.AdjustMusicVolume(0.4f);
     }
 
     private void CloseOptionsMenu()
@@ -56,7 +65,13 @@ public class OptionsMenu : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
         alreadyOpen = false;
 
-        AudioManager.instance.AdjustVolume(1.0f);
+        Button[] buttons = GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].enabled = false;
+        }
+
+        AudioManager.instance.AdjustMusicVolume(1.0f);
 
         playerController.EnablePlayerControls();
         Time.timeScale = 1f;

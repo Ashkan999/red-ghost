@@ -12,6 +12,8 @@ public class SettingsMenu : MonoBehaviour
     void OnEnable()
     {
         EventSystem.current.SetSelectedGameObject(firstButtonSelected.gameObject);
+
+        volumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
     }
 
     public void AdjustVolumeSlider()

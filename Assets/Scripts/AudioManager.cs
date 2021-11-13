@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource playerDeath;
     [SerializeField] private AudioSource menuSelection;
     [SerializeField] private AudioSource menuConfirm;
+    [SerializeField] private AudioSource wind;
+    [SerializeField] private string musicVolume;
+    [SerializeField] private AudioMixer audioMixer;
 
     void Awake()
     {
@@ -59,7 +63,7 @@ public class AudioManager : MonoBehaviour
         animator.SetTrigger("stopMusic");
     }
 
-    public void AdjustVolume(float volume)
+    public void AdjustMusicVolume(float volume)
     {
         // AudioSource[] audioSources = AudioManager.instance.GetComponentsInChildren<AudioSource>(); //preferably we would want to be able to lower sources instead of the audio listener but 
         // sources that are animated can apparantly not be scripted anymore
@@ -69,8 +73,7 @@ public class AudioManager : MonoBehaviour
         // }
 
         float masterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
-        AudioListener.volume = volume * masterVolume;
-
+        audioMixer.SetFloat(musicVolume, Mathf.Log10(volume * masterVolume) * 20f);
     }
 
     public void PlayPlayerMoveSound()
@@ -96,5 +99,12 @@ public class AudioManager : MonoBehaviour
     public void PlayMenuConfirmSelectionSound()
     {
         menuConfirm.Play();
+    }
+
+    public void PlayWindSound()
+    {
+        // Debug.Log("wind");
+        // wind.Play();
+        // wind.volume = 1f;
     }
 }
