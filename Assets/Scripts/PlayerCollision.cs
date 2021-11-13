@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        AudioManager.instance.PlayPlayerDamageSound();
         CameraShaker.Instance.ShakeOnce(8f, 13f, 0f, 0.7f);
         obstacleDestroyer.DestroyObstacle(other.gameObject);
         StartCoroutine(PlayerIsInvincible(invincibleDuration));

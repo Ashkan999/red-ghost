@@ -42,7 +42,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Volume
-    path: WindSound
+    path: Effects/Wind
     classID: 82
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -54,7 +54,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2283791080
+      path: 2304793134
       attribute: 4104493590
       script: {fileID: 0}
       typeID: 82
@@ -107,7 +107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Volume
-    path: WindSound
+    path: Effects/Wind
     classID: 82
     script: {fileID: 0}
   m_EulerEditorCurves: []

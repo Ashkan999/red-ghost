@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] private Slider volumeSlider;
-    [SerializeField] private GameObject firstButtonSelected;
+    [SerializeField] private Button firstButtonSelected;
 
     public UnityEngine.UI.Slider VolumeSlider { get => volumeSlider; set => volumeSlider = value; }
 
     void OnEnable()
     {
-        EventSystem.current.SetSelectedGameObject(firstButtonSelected);
+        EventSystem.current.SetSelectedGameObject(firstButtonSelected.gameObject);
     }
 
     public void AdjustVolumeSlider()

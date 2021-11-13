@@ -30,16 +30,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3
-        value: 0.244
-        inSlope: 0.13400458
-        outSlope: 0.13400458
+        time: 3.4333334
+        value: 0.214
+        inSlope: 0.086030155
+        outSlope: 0.086030155
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7.2833333
+        time: 9.95
         value: 1
         inSlope: 0
         outSlope: 0
@@ -51,7 +51,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Volume
-    path: GameplaySong1
+    path: Music/Gameplay1
     classID: 82
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -63,7 +63,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2200289626
+      path: 816943048
       attribute: 4104493590
       script: {fileID: 0}
       typeID: 82
@@ -75,7 +75,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 7.2833333
+    m_StopTime: 9.95
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -104,16 +104,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3
-        value: 0.244
-        inSlope: 0.13400458
-        outSlope: 0.13400458
+        time: 3.4333334
+        value: 0.214
+        inSlope: 0.086030155
+        outSlope: 0.086030155
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7.2833333
+        time: 9.95
         value: 1
         inSlope: 0
         outSlope: 0
@@ -125,7 +125,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Volume
-    path: GameplaySong1
+    path: Music/Gameplay1
     classID: 82
     script: {fileID: 0}
   m_EulerEditorCurves: []

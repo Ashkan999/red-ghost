@@ -7,6 +7,10 @@ public class AudioManager : MonoBehaviour
     private Animator animator;
     private bool GameplayMusic2Started; //update this outside this class when going to main menu from pause
     [SerializeField] private AudioSource playerMove;
+    [SerializeField] private AudioSource playerDamage;
+    [SerializeField] private AudioSource playerDeath;
+    [SerializeField] private AudioSource menuSelection;
+    [SerializeField] private AudioSource menuConfirm;
 
     void Awake()
     {
@@ -66,5 +70,25 @@ public class AudioManager : MonoBehaviour
     public void PlayPlayerMoveSound()
     {
         playerMove.Play();
+    }
+
+    public void PlayPlayerDamageSound()
+    {
+        playerDamage.Play();
+    }
+
+    public void PlayPlayerDeathSound()
+    {
+        playerDeath.Play();
+    }
+
+    public void PlayMenuChangeSelectionSound()
+    {
+        menuSelection.Play();
+    }
+
+    public void PlayMenuConfirmSelectionSound()
+    {
+        menuConfirm.Play();
     }
 }
