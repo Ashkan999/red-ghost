@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
     // }
     void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         StartCoroutine(SelectFirstButtonAfterOneFrame());
     }
 

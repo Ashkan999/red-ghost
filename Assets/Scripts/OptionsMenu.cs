@@ -29,6 +29,8 @@ public class OptionsMenu : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         EventSystem.current.SetSelectedGameObject(firstButtonSelected);
 
         CloseOptionsMenu();
