@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentPosition.y < maxHeight)
         {
+            AudioManager.instance.PlayPlayerMoveSound();
             CameraShaker.Instance.ShakeOnce(2f, 5f, 0f, 0.2f);
             Destroy(Instantiate(playerEffect, rb2D.position, Quaternion.Euler(180, 0, 0)), 2f);
             Vector2 targetPos = currentPosition + Vector2.up * verticalMovement;
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if (currentPosition.y > minHeight)
         {
+            AudioManager.instance.PlayPlayerMoveSound();
             CameraShaker.Instance.ShakeOnce(2f, 5f, 0f, 0.2f);
             Destroy(Instantiate(playerEffect, rb2D.position, Quaternion.identity), 2f);
             Vector2 targetPos = currentPosition + Vector2.down * verticalMovement;

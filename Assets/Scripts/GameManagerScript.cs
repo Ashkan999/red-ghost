@@ -21,6 +21,8 @@ public class GameManagerScript : MonoBehaviour
     private int score;
     private int lives;
     private bool gameHasEnded = false;
+    private AudioManager audioManager;
+
 
     // void Awake()
     // {
@@ -36,11 +38,15 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         score = 0;
         scoreScript.scoreText.text = 0.ToString();
         lives = 3;
         ObstacleMovement.speed = startSpeed;
         obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+        audioManager = AudioManager.instance;
         gameOverScreen.SetActive(false); //naar gameScreens
     }
 
@@ -52,6 +58,11 @@ public class GameManagerScript : MonoBehaviour
             obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
         }
         //FindObjectsOfType<ObstacleMovement>() += speedIncrease * Time.deltaTime;
+
+        if (score > 50)
+        {
+            audioManager.ChangeGameplayMusic();
+        }
     }
 
     public void AddToScore(int scoreIncrease)
@@ -75,10 +86,13 @@ public class GameManagerScript : MonoBehaviour
     {
         if (!gameHasEnded)
         {
+            audioManager.PlayPlayerDeathSound();
+            audioManager.StopMusic();
+
             gameOverScreen.SetActive(true); // naar gameScreens miss
             finalScore.DisplayFinalScore(score);
 
-            if (score > PlayerPrefs.GetInt("HighScore", 0)) 
+            if (score > PlayerPrefs.GetInt("HighScore", 0))
             {
                 PlayerPrefs.SetInt("HighScore", score);
             }
