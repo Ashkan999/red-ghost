@@ -17,11 +17,12 @@ public class GameManagerScript : MonoBehaviour
     public FinalScore finalScore;
     public GameObject player;
     public LivesContainer livesContainer;
-    public AudioManager audioManager;
 
     private int score;
     private int lives;
     private bool gameHasEnded = false;
+    private AudioManager audioManager;
+
 
     // void Awake()
     // {
@@ -42,6 +43,7 @@ public class GameManagerScript : MonoBehaviour
         lives = 3;
         ObstacleMovement.speed = startSpeed;
         obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+        audioManager = AudioManager.instance;
         gameOverScreen.SetActive(false); //naar gameScreens
     }
 

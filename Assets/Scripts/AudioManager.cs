@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(instance);
 
-            animator = instance.GetComponent<Animator>();
+            animator = GetComponent<Animator>();
             GameplayMusic2Started = false;
         }
         else
@@ -37,6 +37,12 @@ public class AudioManager : MonoBehaviour
     public void StartGameplayMusic()
     {
         animator.SetTrigger("startGameplayMusic");
+    }
+
+
+    public void StartGameplayMusicFromMainMenu()
+    {
+        animator.SetTrigger("StartGameplayMusicFromMainMenu");
     }
 
     public void ChangeGameplayMusic()

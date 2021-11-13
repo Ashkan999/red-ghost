@@ -8,14 +8,47 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private Button firstButtonSelected;
     [SerializeField] private SceneLoader sceneLoader;
-    [SerializeField] private AudioManager audioManager;
     [SerializeField] private GameObject highScoreMenu;
     [SerializeField] private GameObject settingsMenu;
+    private AudioManager audioManager;
 
     // void Start() // use this if start does not get selected at start of game
     // {
     //     StartCoroutine(SelectFirstButtonAfterOneFrame());
     // }
+
+    void Start()
+    {
+        audioManager = AudioManager.instance;
+
+        Time.timeScale = 1f; //Because if we come from pause menu time could still be paused
+        audioManager.AdjustVolume(1.0f);
+
+        //add eventriggers to all buttons for changeSelection sound on deselect
+        highScoreMenu.SetActive(true);
+        settingsMenu.SetActive(true);
+
+        EventTrigger[] eventTriggers = transform.parent.gameObject.GetComponentsInChildren<EventTrigger>();
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.Deselect;
+        entry.callback.AddListener((eventData) => { audioManager.PlayMenuChangeSelectionSound(); });
+        for (int i = 0; i < eventTriggers.Length; i++)
+        {
+            eventTriggers[i].triggers.Add(entry);
+        }
+
+        //add confirmSelection sound on onClick of all buttons
+        Button[] buttons = transform.parent.gameObject.GetComponentsInChildren<Button>();
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].onClick.AddListener(audioManager.PlayMenuConfirmSelectionSound);
+        }
+
+        highScoreMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+
+    }
+
     void OnEnable()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -37,7 +70,7 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(sceneLoader.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1));
 
         audioManager.PlayMenuConfirmSelectionSound();
-        audioManager.StartGameplayMusic();
+        audioManager.StartGameplayMusicFromMainMenu();
     }
 
     public void OpenHighScore()

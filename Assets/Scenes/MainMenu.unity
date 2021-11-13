@@ -1887,7 +1887,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstButtonSelected: {fileID: 1363397821}
   sceneLoader: {fileID: 1159909437}
-  audioManager: {fileID: 1731575025}
   highScoreMenu: {fileID: 808575589}
   settingsMenu: {fileID: 844562173}
 --- !u!114 &713207254
@@ -4504,31 +4503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 490468230, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2083090966768656516, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 1234526929, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -3920425208827824767, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 1429125308, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2083090966768656516, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 1745941694, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 2083090966768656516, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 2109963618, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -3920425208827824767, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
     - target: {fileID: 624352938400394610, guid: f0399cefe26e5ff43954540eaa3ae8f7,
         type: 3}
       propertyPath: m_Name
@@ -4589,29 +4563,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4586824831172645752, guid: f0399cefe26e5ff43954540eaa3ae8f7,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -9222624051478426074, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 6006504471169332065, guid: f0399cefe26e5ff43954540eaa3ae8f7,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -9222624051478426074, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 6232861840572622104, guid: f0399cefe26e5ff43954540eaa3ae8f7,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -3920425208827824767, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
-    - target: {fileID: 8013267001590805662, guid: f0399cefe26e5ff43954540eaa3ae8f7,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 5396273435524256818, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0399cefe26e5ff43954540eaa3ae8f7, type: 3}
