@@ -19,12 +19,15 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         audioManager = AudioManager.instance;
 
         AudioListener.volume = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
 
-        Time.timeScale = 1f; //Because if we come from pause menu time could still be paused
-        audioManager.AdjustMusicVolume(1.0f);
+        Time.timeScale = 1f; //Because if we come from pause menu time could still be paused and audio dimmed
+        audioManager.UnpauseMusic();
 
         //add eventriggers to all buttons for changeSelection sound on deselect
         highScoreMenu.SetActive(true);
@@ -53,8 +56,8 @@ public class MainMenu : MonoBehaviour
 
     void OnEnable()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
         StartCoroutine(SelectFirstButtonAfterOneFrame());
     }
 

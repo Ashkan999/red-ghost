@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -39,6 +40,8 @@ public class OptionsMenu : MonoBehaviour
 
     void OpenOptionsMenu()
     {
+        StartCoroutine(LockAndHideCursor());
+
         playerController.DisablePlayerControls();
         Time.timeScale = 0f;
 
@@ -55,11 +58,13 @@ public class OptionsMenu : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(firstButtonSelected);
 
-        AudioManager.instance.AdjustMusicVolume(0.4f);
+        AudioManager.instance.PauseMusic();
     }
 
     private void CloseOptionsMenu()
     {
+        StartCoroutine(LockAndHideCursor());
+
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -71,10 +76,17 @@ public class OptionsMenu : MonoBehaviour
             buttons[i].enabled = false;
         }
 
-        AudioManager.instance.AdjustMusicVolume(1.0f);
+        AudioManager.instance.UnpauseMusic();
 
         playerController.EnablePlayerControls();
         Time.timeScale = 1f;
+    }
+
+    IEnumerator LockAndHideCursor()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void EnableUIControls()

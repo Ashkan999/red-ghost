@@ -12,10 +12,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource playerDeath;
     [SerializeField] private AudioSource menuSelection;
     [SerializeField] private AudioSource menuConfirm;
-    [SerializeField] private AudioSource wind;
     [SerializeField] private AudioSource finalScore;
     [SerializeField] private AudioSource finalScoreFinish;
     [SerializeField] private string musicVolume;
+    [SerializeField] private string effectsVolume;
     [SerializeField] private AudioMixer audioMixer;
 
     void Awake()
@@ -65,17 +65,14 @@ public class AudioManager : MonoBehaviour
         animator.SetTrigger("stopMusic");
     }
 
-    public void AdjustMusicVolume(float volume)
+    public void PauseMusic()
     {
-        // AudioSource[] audioSources = AudioManager.instance.GetComponentsInChildren<AudioSource>(); //preferably we would want to be able to lower sources instead of the audio listener but 
-        // sources that are animated can apparantly not be scripted anymore
-        // for (int i = 0; i < audioSources.Length; i++)
-        // {
-        //     audioSources[i].volume = volume;
-        // }
+        audioMixer.FindSnapshot("paused").TransitionTo(0f);
+    }
 
-        float masterVolume = PlayerPrefs.GetFloat("MasterVolume", 0.5f);
-        audioMixer.SetFloat(musicVolume, Mathf.Log10(volume * masterVolume) * 20f);
+    public void UnpauseMusic()
+    {
+        audioMixer.FindSnapshot("start").TransitionTo(0f);
     }
 
     public void PlayPlayerMoveSound()
@@ -112,12 +109,5 @@ public class AudioManager : MonoBehaviour
     {
         finalScore.Stop();
         finalScoreFinish.Play();
-    }
-
-    public void PlayWindSound()
-    {
-        // Debug.Log("wind");
-        // wind.Play();
-        // wind.volume = 1f;
     }
 }
