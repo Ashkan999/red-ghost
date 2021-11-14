@@ -60,6 +60,7 @@ public class GameManagerScript : MonoBehaviour
         //FindObjectsOfType<ObstacleMovement>() += speedIncrease * Time.deltaTime;
 
         if (score > 50)
+        if (score > 60)
         {
             audioManager.ChangeGameplayMusic();
         }
