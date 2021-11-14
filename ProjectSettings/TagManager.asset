@@ -41,21 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BackgroundLayer
+  - name: BackgroundUnlit
     uniqueID: 264509079
     locked: 0
-  - name: BackgroundLightLayer
+  - name: BackgroundLit
     uniqueID: 842511109
     locked: 0
-  - name: ObstacleLayer
+  - name: Obstacles
     uniqueID: 451558427
     locked: 0
-  - name: PlayerLayer
+  - name: Player
     uniqueID: 3448604969
     locked: 0
-  - name: UILayer
+  - name: FogOfWar
+    uniqueID: 2966019889
+    locked: 0
+  - name: UI
     uniqueID: 2578411969
     locked: 0
-  - name: ScreenFadeLayer
+  - name: ScreenFade
     uniqueID: 994299679
     locked: 0
