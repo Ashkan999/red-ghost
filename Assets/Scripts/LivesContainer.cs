@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class LivesContainer : MonoBehaviour
 {
-
     private int currentLive;
     private Image[] lives;
 

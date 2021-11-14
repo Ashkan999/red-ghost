@@ -98,8 +98,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""27a58bc0-f838-4b76-b12a-d3ba49da61ad"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""35cf7791-8fc9-420c-926f-a3d8229caa30"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
