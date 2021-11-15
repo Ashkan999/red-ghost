@@ -46,6 +46,7 @@ public class GameManagerScript : MonoBehaviour
         lives = 3;
         ObstacleMovement.speed = startSpeed;
         obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+        BackGround.speed = startSpeed;
         audioManager = AudioManager.instance;
         gameOverScreen.SetActive(false); //naar gameScreens
     }
@@ -56,10 +57,11 @@ public class GameManagerScript : MonoBehaviour
         {
             ObstacleMovement.speed += speedIncrease * Time.deltaTime;
             obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+
+            BackGround.speed += speedIncrease * Time.deltaTime;
         }
         //FindObjectsOfType<ObstacleMovement>() += speedIncrease * Time.deltaTime;
 
-        if (score > 50)
         if (score > 60)
         {
             audioManager.ChangeGameplayMusic();
@@ -70,7 +72,7 @@ public class GameManagerScript : MonoBehaviour
     {
         score += scoreIncrease;
         scoreScript.scoreText.text = score.ToString();
-        StartCoroutine(scoreScript.ScoreEffect(20, 0.2f));
+        StartCoroutine(scoreScript.ScoreEffect(20, obstacleSpawner.respawnTime / 2f));
     }
 
     public void ReduceLife()

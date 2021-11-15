@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Obstacle_Material
+  m_Name: Player_Material
   m_Shader: {fileID: -6465566751694194690, guid: 4a7e04add449e3b46bdfef259588f3d1,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
@@ -21,13 +21,13 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Emission:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2e4c7c92ecd51654eb10f9758c692dae, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ccdbaecceb14ddc4b8e4620967708565, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_B531C16F: {r: 5.650365, g: 0.4797481, b: 0.4797481, a: 0}
+    - Color_B531C16F: {r: 0.35033074, g: 0.029745072, b: 0.055539265, a: 0}

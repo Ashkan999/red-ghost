@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.5566038, g: 0.24154505, b: 0.24154505, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 29898dcd1b3cea1a
+  m_ApplyToSortingLayers: 29898dcd1b3cea1a05b33732
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 1
   m_LightOrder: 0
@@ -171,9 +171,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012944341, y: 0.14940643}
+  m_Offset: {x: 0.02029043, y: 0.1446607}
   serializedVersion: 2
-  m_Radius: 1.1909547
+  m_Radius: 1.1909525
 --- !u!50 &1784938784493910900
 Rigidbody2D:
   serializedVersion: 4

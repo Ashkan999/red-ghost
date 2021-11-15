@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
-    public float speed;
-
+    public static float speed;
+    public float relativeSpeed;
     public float endPos;
     public float startPos;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.position += Vector3.left * speed * relativeSpeed * Time.fixedDeltaTime;
 
-        if (transform.position.x <= endPos) {
+        if (transform.position.x <= endPos)
+        {
             transform.position = new Vector2(startPos, transform.position.y);
         }
     }

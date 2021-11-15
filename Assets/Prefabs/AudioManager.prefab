@@ -877,6 +877,7 @@ MonoBehaviour:
   finalScore: {fileID: 629155441}
   finalScoreFinish: {fileID: 3492924708818143204}
   musicVolume: MusicVolume
+  effectsVolume: EffectsVolume
   audioMixer: {fileID: 24100000, guid: 3bc0b6d47d5535a40ba5fd3b2ce00720, type: 2}
 --- !u!1 &1919935417276244703
 GameObject:
