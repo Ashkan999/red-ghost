@@ -46,6 +46,7 @@ public class GameManagerScript : MonoBehaviour
         lives = 3;
         ObstacleMovement.speed = startSpeed;
         obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+        BackGround.speed = startSpeed;
         audioManager = AudioManager.instance;
         gameOverScreen.SetActive(false); //naar gameScreens
     }
@@ -56,6 +57,8 @@ public class GameManagerScript : MonoBehaviour
         {
             ObstacleMovement.speed += speedIncrease * Time.deltaTime;
             obstacleSpawner.respawnTime = speedToRespawnRatio / ObstacleMovement.speed;
+
+            BackGround.speed += speedIncrease * Time.deltaTime;
         }
         //FindObjectsOfType<ObstacleMovement>() += speedIncrease * Time.deltaTime;
 

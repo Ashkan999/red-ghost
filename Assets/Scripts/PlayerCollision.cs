@@ -15,7 +15,7 @@ public class PlayerCollision : MonoBehaviour
         CameraShaker.Instance.ShakeOnce(8f, 13f, 0f, 0.7f);
         obstacleDestroyer.DestroyObstacle(other.gameObject);
         StartCoroutine(PlayerIsInvincible(invincibleDuration));
-        // gameManagerScript.ReduceLife();
+        gameManagerScript.ReduceLife();
     }
 
     IEnumerator PlayerIsInvincible(float duration)
