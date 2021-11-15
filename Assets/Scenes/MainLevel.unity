@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2620,6 +2620,41 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 326046697}
+    - target: {fileID: 5929403131417811361, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 139.1834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811361, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 95.902725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811361, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 44.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811361, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -41.600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811374, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811374, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929403131417811374, guid: 4791db41f0d20964ea3cc25f408334c5,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5929403131712649122, guid: 4791db41f0d20964ea3cc25f408334c5,
         type: 3}
       propertyPath: m_Pivot.x

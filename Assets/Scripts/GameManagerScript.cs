@@ -72,7 +72,7 @@ public class GameManagerScript : MonoBehaviour
     {
         score += scoreIncrease;
         scoreScript.scoreText.text = score.ToString();
-        StartCoroutine(scoreScript.ScoreEffect(20, 0.2f));
+        StartCoroutine(scoreScript.ScoreEffect(20, obstacleSpawner.respawnTime / 2f));
     }
 
     public void ReduceLife()
